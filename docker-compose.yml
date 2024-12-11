@@ -1,4 +1,4 @@
-version: "3"
+# version: "3"
 services:
   analysis_service:
     container_name: analysis_service
@@ -7,7 +7,7 @@ services:
       context: ./analysis_service
       dockerfile: Dockerfile
     env_file:
-      - ./analysis_service/.env
+      - ./analysis_service/.env.example
     volumes:
       - ./analysis_service/logs:/app/logs
       - ./analysis_service/candidate_cv:/app/candidate_cv
